@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Simple Library
+# Math-Magicians
 
 >  This is simple project created using react
 
