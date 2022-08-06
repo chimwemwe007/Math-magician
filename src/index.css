@@ -7,7 +7,6 @@
 .calculator {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 50%;
   justify-content: center;
   align-items: center;
@@ -32,24 +31,22 @@ main {
 }
 
 .input {
-  .output {
-    grid-column: 1/ span 4;
-    background-color: gray;
-    text-align: right;
-    justify-self: end;
-    font-size: 2rem;
-    width: 100%;
-    padding: 15px;
-    font-weight: bold;
-    color: white;
-    height: 80px;
-  }
+  grid-column: 1/ span 4;
+  background-color: gray;
+  text-align: right;
+  justify-self: end;
+  font-size: 2rem;
+  width: 100%;
+  padding: 15px;
+  font-weight: bold;
+  color: white;
+  height: 80px;
+}
 
-  .symbol {
-    background-color: rgb(245, 140, 42);
-  }
+.symbol {
+  background-color: rgb(245, 140, 42);
+}
 
-  button {
-    cursor: pointer;
-  }
+button {
+  cursor: pointer;
 }
