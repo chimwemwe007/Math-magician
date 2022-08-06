@@ -1,6 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Math Magician 
+
+# Math Magician
 
 a website for all fans of mathematics built with react it contains calculator and math quotes.
 
