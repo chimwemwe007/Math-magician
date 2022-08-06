@@ -28,6 +28,7 @@ a website for all fans of mathematics built with react it contains calculator an
 👤 **Chimwemwe Mkandawire**
 
 - GitHub: [@hammaazarok](https://github.com/chimwemwe007)
+- twitter
 
 
 ## 🤝 Contributing
