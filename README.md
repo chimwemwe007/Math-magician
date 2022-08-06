@@ -2,14 +2,13 @@
 
 # Simple Library
 
->  This is simple project about adding, removing new book, a building or room containing collections of books, periodicals, and   for use or borrowing by the public or the members of an institution. 
+>  This is simple project created using react
 
 ## Built With
 
+- REACT
 - HTML
-- CSS
-- JavaScript
-- Git and github
+- JS
 
 ## Live Demo
 
@@ -21,15 +20,10 @@
 
 ## Authors
 
-👤 **Bahoz Ali**
-
-- GitHub: [@githubhandle](https://github.com/bahoz-ali)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/bahoz-ali)
-
 👤 **Chimwemwe Mkandawire**
 
 - GitHub: [@githubhandle](https://github.com/chimwemwe007)
-- Twitter: [@twitterhandle](https://twitter.com/CHxMZMK)
+- Twitter: [@twitterhandle](https://twitter.com/chmxzmk)
 
 ## 🤝 Contributing
 
