@@ -1,5 +1,5 @@
 /* eslint-disable */
-import Calculator from './calculator.js';
+import Calculator from './calculator';
 
 const CalculatorPage = () => (
   <>
