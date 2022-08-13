@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/navbar.js';
 import Home from './components/home.js';

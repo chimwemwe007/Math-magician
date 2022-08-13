@@ -1,203 +1,53 @@
-import React, { useState } from 'react';
-import calculate from '../logic/calculate';
+/* eslint-disable */
+/* eslint-disable react/prefer-stateless-function */
+import React from 'react';
+import calculate from '../Logic/calculate';
 
-const Calculator = () => {
-  const [obj, setObj] = useState({
-    total: null,
-    next: null,
-    operation: null,
-  });
-  const performClick = (e) => {
-    const value = e.target.innerHTML;
-    const { total, next, operation } = calculate(obj, value);
-    setObj({ total, next, operation });
-    const screen = document.querySelector('.screen');
-    if (next !== null) {
-      screen.innerHTML = next;
-    } else if (total !== null) {
-      screen.innerHTML = total;
-    } else if (next !== null && total !== null) {
-      screen.innerHTML = total;
-    } else {
-      screen.innerHTML = '0';
-    }
-  };
-  return (
-    <div className="calculator">
-      <div className="cal-item screen">0</div>
-      <div
-        className="cal-item"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="0"
-      >
-        AC
-      </div>
-      <div
-        className="cal-item"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="-1"
-      >
-        +/-
-      </div>
-      <div
-        className="cal-item"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="-2"
-      >
-        %
-      </div>
-      <div
-        className="cal-item orange"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="-3"
-      >
-        ÷
-      </div>
-      <div
-        className="cal-item"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="-4"
-      >
-        7
-      </div>
-      <div
-        className="cal-item"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="-5"
-      >
-        8
-      </div>
-      <div
-        className="cal-item"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="-6"
-      >
-        9
-      </div>
-      <div
-        className="cal-item orange"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="-7"
-      >
-        x
-      </div>
-      <div
-        className="cal-item"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="-8"
-      >
-        4
-      </div>
-      <div
-        className="cal-item"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="-9"
-      >
-        5
-      </div>
-      <div
-        className="cal-item"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="-10"
-      >
-        6
-      </div>
-      <div
-        className="cal-item orange"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="-11"
-      >
-        -
-      </div>
-      <div
-        className="cal-item"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="-12"
-      >
-        1
-      </div>
-      <div
-        className="cal-item"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="-13"
-      >
-        2
-      </div>
-      <div
-        className="cal-item"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="-14"
-      >
-        3
-      </div>
-      <div
-        className="cal-item orange"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="-15"
-      >
-        +
-      </div>
-      <div
-        className="cal-item zero"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="-16"
-      >
-        0
-      </div>
-      <div
-        className="cal-item"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="-17"
-      >
-        .
-      </div>
-      <div
-        className="cal-item orange"
-        onClick={performClick}
-        onKeyDown={performClick}
-        role="button"
-        tabIndex="-18"
-      >
-        =
-      </div>
-    </div>
-  );
-};
+class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: '',
+      operation: '',
+      next: '',
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
 
+  handleClick = (e) => {
+    this.setState((obj) => calculate(obj, e.target.innerText));
+  }
+
+  render() {
+    const { total, operation, next } = this.state;
+    return (
+      <main>
+        <section className="calculator">
+          <p className="input">{(total || '') + (operation || '') + (next || '') || 0 }</p>
+          <button type="button" id="AC" onClick={this.handleClick}>AC</button>
+          <button type="button" id="+/-" onClick={this.handleClick}>+/-</button>
+          <button type="button" id="%" onClick={this.handleClick}>%</button>
+          <button className="symbol" type="button" id="&divide;" onClick={this.handleClick}>&divide;</button>
+          <button type="button" id="7" onClick={this.handleClick}>7</button>
+          <button type="button" id="8" onClick={this.handleClick}>8</button>
+          <button type="button" id="9" onClick={this.handleClick}>9</button>
+          <button className="symbol" type="button" id="x" onClick={this.handleClick}>x</button>
+          <button type="button" id="4" onClick={this.handleClick}>4</button>
+          <button type="button" id="5" onClick={this.handleClick}>5</button>
+          <button type="button" id="6" onClick={this.handleClick}>6</button>
+          <button className="symbol" type="button" id="-" onClick={this.handleClick}>-</button>
+          <button type="button" id="1" onClick={this.handleClick}>1</button>
+          <button type="button" id="2" onClick={this.handleClick}> 2 </button>
+          <button type="button" id="3" onClick={this.handleClick}> 3 </button>
+          <button className="symbol" type="button" id="+" onClick={this.handleClick}>+</button>
+          <button className="zero" type="button" id="0" onClick={this.handleClick}>0</button>
+          <button type="button" id="." onClick={this.handleClick}>.</button>
+          <button className="symbol" type="button" id="=" onClick={this.handleClick}>=</button>
+        </section>
+      </main>
+    );
+  }
+}
+
+Calculator.defaultProps = { total: 0, operations: '', next: 0 };
 export default Calculator;
