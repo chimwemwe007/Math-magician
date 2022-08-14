@@ -16,6 +16,16 @@ function App() {
       </Routes>
       <div className="footer">
         <p>&copy; Math magicians 2022</p>
+/* eslint-disable react/prefer-stateless-function */
+
+import React from 'react';
+import Calculator from './Components/Calculator';
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <Calculator />
       </div>
     </div>
   );
