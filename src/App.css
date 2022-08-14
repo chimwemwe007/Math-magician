@@ -1,0 +1,96 @@
+.calculator {
+  display: grid;
+  gap: 3px;
+  background-color: #d1d1d1;
+  padding: 3px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  width: 60%;
+}
+
+.cal-item {
+  display: flex;
+  background-color: #e0e0e0;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 30px;
+  height: 60px;
+}
+
+.cal-item:hover {
+  background-color: #bab9b9;
+  cursor: pointer;
+}
+
+.screen {
+  grid-column: 1 / span 4;
+  background-color: #858693;
+  justify-content: end;
+  color: #fff;
+  font-size: 40px;
+}
+
+.orange {
+  background-color: #f39148;
+}
+
+.zero {
+  grid-column: 1 / span 2;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 50px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #3363e6;
+  font-size: 18px;
+  margin-right: 5px;
+  border-right: 3px solid #0b0c0e;
+  padding-right: 10px;
+}
+
+.home-container {
+  margin: 0 50px;
+}
+
+.home-container p {
+  margin-bottom: 25px;
+}
+
+.quote-container {
+  text-align: center;
+  margin: 50px 50px;
+  padding: 50px;
+  box-shadow: 0 0.5px 3px 2px #282c343a;
+}
+
+.quote-container p {
+  line-height: 25px;
+}
+
+.quote-container span {
+  color: #1850ec;
+}
+
+.calculator-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 50px;
+  flex-wrap: wrap;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+}
